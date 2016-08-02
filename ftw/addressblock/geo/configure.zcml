@@ -1,0 +1,18 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="ftw.addressblock">
+
+    <genericsetup:registerProfile
+        name="default"
+        title="ftw.addressblock.geo"
+        directory="profiles/default"
+        description="Optional geo and map support for ftw.addressblock. Do not forget to install the default profile too."
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        />
+
+    <include file="resources.zcml"/>
+
+    <adapter factory=".adapters.AddressBlockLocationAdapter"/>
+
+</configure>

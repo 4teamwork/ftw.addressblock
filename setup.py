@@ -4,14 +4,22 @@ import os
 version = '1.0.0a1.dev0'
 maintainer = '4teamwork'
 
+
+geo_require = [
+    'collective.geo.bundle [dexterity]',
+    'collective.geo.mapwidget',
+    'ftw.geo',
+]
+
 tests_require = [
     'ftw.builder',
     'ftw.testing',
     'ftw.testbrowser',
-]
+] + geo_require
 
 extras_require = {
     'tests': tests_require,
+    'geo': geo_require,
 }
 
 setup(
@@ -45,6 +53,7 @@ setup(
     zip_safe=False,
 
     install_requires=[
+        'ftw.autofeature',
         'ftw.simplelayout [contenttypes]',
         'ftw.upgrade',
         'Plone',
