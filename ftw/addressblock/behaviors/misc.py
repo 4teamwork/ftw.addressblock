@@ -19,7 +19,7 @@ class IAddressblockMisc(model.Schema):
     )
 
     opening_hours = RichText(
-        title=_(u'label_opening_hours', default=u'Opening hours'),
+        title=_(u'label_opening_hours', default=u'Opening Hours'),
         required=False,
         default_mime_type='text/html',
         output_mime_type='text/x-html-safe',

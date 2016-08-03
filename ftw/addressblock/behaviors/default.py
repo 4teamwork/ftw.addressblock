@@ -1,8 +1,10 @@
 from ftw.addressblock import _
+from plone import api
 from plone.app.textfield import RichText
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.supermodel import model
 from zope import schema
+from zope.i18n import translate
 from zope.interface import provider
 from zope.schema.interfaces import IContextAwareDefaultFactory
 
@@ -15,8 +17,25 @@ def get_default_address_title(context):
     return title
 
 
+@provider(IContextAwareDefaultFactory)
+def get_default_country(context):
+    return translate(
+        _(u'country_default_value', default=u'Switzerland'),
+        context=api.portal.get().REQUEST,
+    )
+
+
 @provider(IFormFieldProvider)
 class IAddressblockDefault(model.Schema):
+
+    title = schema.TextLine(
+        title=_(u'label_title', default=u'Title'),
+        description=_(
+            u'description_title',
+            default=u'The id of this content will be derived from this value.'
+        ),
+        required=False,
+    )
 
     address_title = schema.TextLine(
         title=_(u'label_address_title', default='Address title'),
@@ -50,7 +69,7 @@ class IAddressblockDefault(model.Schema):
 
     country = schema.TextLine(
         title=_(u'label_country', default=u'Country'),
-        default=u'Schweiz',
+        defaultFactory=get_default_country,
         required=False,
     )
 

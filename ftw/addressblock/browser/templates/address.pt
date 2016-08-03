@@ -4,62 +4,75 @@
       i18n:domain="ftw.addressblock">
 
     <tal:block>
-        <p>
-            <tal:addresstitle tal:condition="context/address_title">
-                <span tal:replace="context/address_title"/><br/>
-            </tal:addresstitle>
-            <tal:addresstitle condition="context/department">
-                <span tal:replace="context/department"/><br/>
-            </tal:addresstitle>
-            <span tal:replace="structure view/get_address_as_html"/><br/>
-            <span tal:replace="context/zip_code"/>
-            <span tal:replace="context/city"/><br/>
-            <tal:tel tal:condition="context/phone">
+        <p tal:define="address_title context/address_title;
+                       department context/department;
+                       address view/get_address_as_html;
+                       zip_code context/zip_code;
+                       city context/city;
+                       phone context/phone|nothing;
+                       fax context/fax|nothing;
+                       email context/email|nothing;
+                       show_email context/show_email;
+                       www context/www|nothing;
+                       ">
+            <tal:address_title tal:condition="address_title">
+                <span tal:replace="address_title"/><br/>
+            </tal:address_title>
+            <tal:department condition="department">
+                <span tal:replace="department"/><br/>
+            </tal:department>
+            <tal:address tal:condition="address">
+                <span tal:replace="structure address"/><br/>
+            </tal:address>
+            <tal:zip_code tal:condition="zip_code">
+                <span tal:replace="zip_code"/>
+            </tal:zip_code>
+            <tal:city tal:condition="city">
+                <span tal:replace="city"/><br/>
+            </tal:city>
+            <tal:phone tal:condition="phone">
                 <tal:translate i18n:translate="text_phone">
-                    Tel.
-                    <tal:num i18n:name="num"
-                             tal:content="context/phone"/>
+                    Phone <tal:num i18n:name="phone_number_address" tal:content="phone"/>
                 </tal:translate>
                 <br/>
-            </tal:tel>
-            <tal:tel tal:condition="context/fax|nothing">
+            </tal:phone>
+            <tal:fax tal:condition="fax">
                 <tal:translate i18n:translate="text_fax">
-                    Fax
-                    <tal:num i18n:name="num"
-                             tal:content="context/fax"/>
+                    Fax <tal:num i18n:name="fax_number_address" tal:content="fax"/>
                 </tal:translate>
                 <br/>
-            </tal:tel>
+            </tal:fax>
 
-            <tal:email tal:condition="context/show_email">
-                <a tal:condition="context/email|nothing"
-                   tal:content="context/email"
-                   tal:attributes="href string:mailto:${context/email}"/>
+            <tal:email tal:condition="show_email">
+                <a tal:condition="email"
+                   tal:content="email"
+                   tal:attributes="href string:mailto:${email}"/>
+                <br/>
             </tal:email>
 
-            <tal:www condition="context/www|nothing">
+            <tal:www condition="www">
+                <a tal:content="www"
+                   tal:attributes="href www"/>
                 <br/>
-                <a tal:content="context/www"
-                   tal:attributes="href context/www"/>
             </tal:www>
         </p>
 
-        <tal:openingHours tal:condition="context/opening_hours">
+        <tal:opening_hours tal:condition="context/opening_hours">
             <a name="opening_hours"></a>
             <h2 i18n:translate="label_opening_hours">Opening hours</h2>
             <p tal:content="structure context/opening_hours/output"></p>
-        </tal:openingHours>
+        </tal:opening_hours>
 
-        <tal:block tal:condition="context/directions">
+        <tal:directions tal:condition="context/directions">
             <a name="directions"></a>
             <h2 i18n:translate="label_directions">Directions</h2>
             <p tal:content="structure context/directions/output"></p>
-        </tal:block>
+        </tal:directions>
 
-        <tal:block tal:condition="context/accessibility">
+        <tal:accessibility tal:condition="context/accessibility">
             <a name="accessibility"></a>
             <h2 i18n:translate="label_accessibility">Accessibility</h2>
             <p tal:content="structure context/accessibility/output"></p>
-        </tal:block>
+        </tal:accessibility>
     </tal:block>
 </html>

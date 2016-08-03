@@ -1,7 +1,5 @@
 from Acquisition import aq_inner
 from Acquisition import aq_parent
-from collections import defaultdict
-
 from ftw.simplelayout.browser.blocks.base import BaseBlock
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
@@ -37,18 +35,15 @@ class AddressBlockView(AddressMixin, BaseBlock):
 
     def get_data(self):
         data = {
-            'title': self.context.block_title,
+            'title': self.context.Title(),
             'address': {
                 'title': self.context.address_title,
-                'title_link_url': '',
                 'phone': self.context.phone,
                 'detail_view_url': '{0}/addressblock_detail_view'.format(
                     self.context.absolute_url()
                 ),
                 'accessibility': self.context.accessibility,
                 'opening_hours': self.context.opening_hours,
-                'department': self.context.department,
-                'email': self.context.email,
                 'has_team': self.has_team(),
                 'team_url': './team',
             },
