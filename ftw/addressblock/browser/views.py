@@ -44,6 +44,10 @@ class AddressBlockView(AddressMixin, BaseBlock):
                 ),
                 'accessibility': self.context.accessibility,
                 'opening_hours': self.context.opening_hours,
+                'email': self.context.email,
+                'contact_url': '{0}/@@contact'.format(
+                    self.context.absolute_url()
+                ),
                 'has_team': self.has_team(),
                 'team_url': './team',
             },

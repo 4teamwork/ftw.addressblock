@@ -12,6 +12,15 @@ want to use this feature you must install both the ``default`` and the ``geo``
 profile in your policy (the  ``geo`` profile won't install the  ``default``
 profile).
 
+There is an extra ``contact`` which will provide a contact form. If you
+want to use this feature you must install both the ``default`` and the ``contact``
+profile in your policy (the  ``contact`` profile won't install the  ``default``
+profile).
+
+The contact form provides a ReCaptcha field which is only rendered for anonymous
+users.
+
+
 
 Development
 ===========

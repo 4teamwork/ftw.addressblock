@@ -35,6 +35,12 @@
                     Buildings Accessibility
                 </a>
             </li>
+            <li tal:condition="data/address/email">
+                <a tal:attributes="href data/address/contact_url"
+                   i18n:translate="addressblock_contact_form_link">
+                    Contact Form
+                </a>
+            </li>
             <li tal:condition="data/address/has_team">
                 <a tal:attributes="href data/address/team_url"
                    i18n:translate="label_team_link">
