@@ -36,12 +36,22 @@ class IAddressblockCommunication(model.Schema):
 
     show_email = schema.Bool(
         title=_(u'label_show_email', default=u'Show email'),
+        description=_(
+            u'description_show_email',
+            default=u'Defines if the email address should be shown on the '
+                    u'detail view of the address block.'
+        ),
         default=True,
         required=False,
     )
 
     email = emailfield.RFC822MailAddress(
         title=_(u'label_email', default=u'Email'),
+        description=_(
+            u'description_email',
+            default=u'A link to the contact form will be shown in the '
+                    u'block if an email address is entered.'
+        ),
         required=False,
     )
 

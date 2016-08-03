@@ -4,6 +4,9 @@ import os
 version = '1.0.0a1.dev0'
 maintainer = '4teamwork'
 
+contact_require = [
+    'plone.formwidget.recaptcha',
+]
 
 geo_require = [
     'collective.geo.bundle [dexterity]',
@@ -15,11 +18,13 @@ tests_require = [
     'ftw.builder',
     'ftw.testing',
     'ftw.testbrowser',
-] + geo_require
+    'ftw.subsite',
+] + geo_require + contact_require
 
 extras_require = {
     'tests': tests_require,
     'geo': geo_require,
+    'contact': contact_require,
 }
 
 setup(
@@ -57,6 +62,7 @@ setup(
         'ftw.simplelayout [contenttypes]',
         'ftw.upgrade',
         'Plone',
+        'plone.api',
         'plone.app.dexterity',
         'plone.dexterity',
         'setuptools',

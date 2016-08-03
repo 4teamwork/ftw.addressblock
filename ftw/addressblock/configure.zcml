@@ -11,6 +11,10 @@
 
     <include package=".behaviors" />
     <include package=".browser" />
+
+    <configure zcml:condition="have ftw.addressblock:contact">
+        <include package=".contact" />
+    </configure>
     <configure zcml:condition="have ftw.addressblock:geo">
         <include package=".geo" />
     </configure>

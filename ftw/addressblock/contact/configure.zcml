@@ -1,18 +1,19 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     i18n_domain="ftw.addressblock">
 
     <genericsetup:registerProfile
         name="default"
-        title="ftw.addressblock.geo"
+        title="ftw.addressblock.contact"
         directory="profiles/default"
-        description="Optional geo and map support for ftw.addressblock. You need to install the default profile too."
+        description="Optional contact form for ftw.addressblock. You need to install the default profile too."
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
-    <include file="resources.zcml"/>
+    <include package=".browser"/>
 
-    <adapter factory=".adapters.AddressBlockLocationAdapter"/>
+    <cmf:registerDirectory name="skins" directory="skins" recursive="True" />
 
 </configure>

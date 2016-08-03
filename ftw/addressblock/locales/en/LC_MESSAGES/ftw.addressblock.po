@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-08-03 09:00+0000\n"
+"POT-Creation-Date: 2016-08-03 12:10+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 msgid "Address block"
 msgstr ""
 
-#: ./ftw/addressblock/configure.zcml:29
+#: ./ftw/addressblock/configure.zcml:33
 msgid "Address block (add-on for ftw.simplelayout)"
 msgstr ""
 
@@ -55,12 +55,29 @@ msgstr ""
 msgid "Miscellaneous"
 msgstr ""
 
+#: ./ftw/addressblock/contact/configure.zcml:13
+msgid "Optional contact form for ftw.addressblock. You need to install the default profile too."
+msgstr ""
+
 #: ./ftw/addressblock/geo/configure.zcml:12
-msgid "Optional geo and map support for ftw.addressblock. Do not forget to install the default profile too."
+msgid "Optional geo and map support for ftw.addressblock. You need to install the default profile too."
+msgstr ""
+
+#: ./ftw/addressblock/contact/browser/contact.py:84
+msgid "Send Email"
+msgstr ""
+
+#. Default: "Name"
+#: ./ftw/addressblock/contact/browser/contact.py:31
+msgid "Sender_Name"
 msgstr ""
 
 #: ./ftw/addressblock/profiles/default/types/ftw.addressblock.AddressBlock.xml
 msgid "The address block displays address data and is usually put in the right column."
+msgstr ""
+
+#: ./ftw/addressblock/contact/browser/contact.py:95
+msgid "The captcha code you entered was wrong, please enter the new one."
 msgstr ""
 
 #. Default: "Buildings Accessibility"
@@ -71,6 +88,11 @@ msgstr ""
 #. Default: "Address / Map"
 #: ./ftw/addressblock/browser/templates/block.pt:21
 msgid "addressblock_address_map_link"
+msgstr ""
+
+#. Default: "Contact Form"
+#: ./ftw/addressblock/browser/templates/block.pt:39
+msgid "addressblock_contact_form_link"
 msgstr ""
 
 #. Default: "Opening Hours"
@@ -88,6 +110,11 @@ msgstr ""
 msgid "addressblock_title"
 msgstr "Contact"
 
+#. Default: "Cancel"
+#: ./ftw/addressblock/contact/browser/contact.py:112
+msgid "button_cancel"
+msgstr ""
+
 #. Default: "Switzerland"
 #: ./ftw/addressblock/behaviors/default.py:23
 msgid "country_default_value"
@@ -98,17 +125,41 @@ msgstr ""
 msgid "description_directions"
 msgstr ""
 
+#. Default: "A link to the contact form will be shown in the block if an email address is entered."
+#: ./ftw/addressblock/behaviors/communication.py:50
+msgid "description_email"
+msgstr ""
+
+#. Default: "Defines if the email address should be shown on the detail view of the address block."
+#: ./ftw/addressblock/behaviors/communication.py:39
+msgid "description_show_email"
+msgstr ""
+
 #. Default: "The id of this content will be derived from this value."
 #: ./ftw/addressblock/behaviors/default.py:33
 msgid "description_title"
 msgstr ""
 
-#: ./ftw/addressblock/configure.zcml:29
+#. Default: "${sender} sends you a message:\n\n${msg}"
+#: ./ftw/addressblock/contact/browser/contact.py:147
+msgid "feedback_email_text"
+msgstr ""
+
+#: ./ftw/addressblock/contact/configure.zcml:13
+msgid "ftw.addressblock.contact"
+msgstr ""
+
+#: ./ftw/addressblock/configure.zcml:33
 msgid "ftw.addressblock.default"
 msgstr ""
 
 #: ./ftw/addressblock/geo/configure.zcml:12
 msgid "ftw.addressblock.geo"
+msgstr ""
+
+#. Default: "The email was sent."
+#: ./ftw/addressblock/contact/browser/contact.py:108
+msgid "info_email_sent"
 msgstr ""
 
 #. Default: "Accessibility"
@@ -149,7 +200,7 @@ msgid "label_directions"
 msgstr ""
 
 #. Default: "Email"
-#: ./ftw/addressblock/behaviors/communication.py:44
+#: ./ftw/addressblock/behaviors/communication.py:49
 msgid "label_email"
 msgstr ""
 
@@ -163,6 +214,11 @@ msgstr ""
 msgid "label_fax"
 msgstr ""
 
+#. Default: "Message"
+#: ./ftw/addressblock/contact/browser/contact.py:43
+msgid "label_message"
+msgstr ""
+
 #. Default: "Opening hours"
 #: ./ftw/addressblock/behaviors/misc.py:22
 #: ./ftw/addressblock/browser/templates/address.pt:62
@@ -174,13 +230,23 @@ msgstr ""
 msgid "label_phone"
 msgstr ""
 
+#. Default: "Send Feedback"
+#: ./ftw/addressblock/contact/browser/contact.py:53
+msgid "label_send_feedback"
+msgstr ""
+
 #. Default: "Show email"
 #: ./ftw/addressblock/behaviors/communication.py:38
 msgid "label_show_email"
 msgstr ""
 
+#. Default: "Subject"
+#: ./ftw/addressblock/contact/browser/contact.py:39
+msgid "label_subject"
+msgstr ""
+
 #. Default: "Team"
-#: ./ftw/addressblock/browser/templates/block.pt:39
+#: ./ftw/addressblock/browser/templates/block.pt:45
 msgid "label_team_link"
 msgstr ""
 
@@ -190,13 +256,18 @@ msgid "label_title"
 msgstr ""
 
 #. Default: "WWW"
-#: ./ftw/addressblock/behaviors/communication.py:49
+#: ./ftw/addressblock/behaviors/communication.py:59
 msgid "label_www"
 msgstr ""
 
 #. Default: "ZIP"
 #: ./ftw/addressblock/behaviors/default.py:59
 msgid "label_zip"
+msgstr ""
+
+#. Default: "Email"
+#: ./ftw/addressblock/contact/browser/contact.py:35
+msgid "mail_address"
 msgstr ""
 
 #. Default: "Fax ${fax_number_address}"

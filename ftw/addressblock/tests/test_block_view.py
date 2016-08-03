@@ -165,9 +165,9 @@ class BlockViewTests(FunctionalTestCase):
             [
                 'Contact '
                 'Apple Store '
-                'Phone +1 408-606-5775\n'
-                '\n'
-                'Address / Map',
+                'Phone +1 408-606-5775\n\n'
+                'Address / Map '
+                'Contact Form'
             ],
             browser.css('#content-core').text
         )
