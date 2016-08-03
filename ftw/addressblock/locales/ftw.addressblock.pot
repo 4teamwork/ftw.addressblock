@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-08-02 14:48+0000\n"
+"POT-Creation-Date: 2016-08-03 08:51+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -60,33 +60,43 @@ msgid "The address block displays address data and is usually put in the right c
 msgstr ""
 
 #. Default: "Buildings Accessibility"
-#: ./ftw/addressblock/browser/templates/block.pt:38
+#: ./ftw/addressblock/browser/templates/block.pt:33
 msgid "addressblock_accessibility_link"
 msgstr ""
 
 #. Default: "Address / Map"
-#: ./ftw/addressblock/browser/templates/block.pt:26
+#: ./ftw/addressblock/browser/templates/block.pt:21
 msgid "addressblock_address_map_link"
 msgstr ""
 
-#. Default: "Open times"
-#: ./ftw/addressblock/browser/templates/block.pt:32
-msgid "addressblock_open_times_link"
+#. Default: "Opening Hours"
+#: ./ftw/addressblock/browser/templates/block.pt:27
+msgid "addressblock_opening_hours_link"
 msgstr ""
 
-#. Default: "Phone ${addressblock_phone}"
-#: ./ftw/addressblock/browser/templates/block.pt:20
+#. Default: "Phone ${phone_number_block}"
+#: ./ftw/addressblock/browser/templates/block.pt:15
 msgid "addressblock_phone_label"
 msgstr ""
 
 #. Default: "Contact"
-#: ./ftw/addressblock/content/addressblock.py:42
+#: ./ftw/addressblock/content/addressblock.py:26
 msgid "addressblock_title"
 msgstr ""
 
+#. Default: "Switzerland"
+#: ./ftw/addressblock/behaviors/default.py:23
+msgid "country_default_value"
+msgstr ""
+
 #. Default: "Describe how to get to the above address by various means of transport."
-#: ./ftw/addressblock/behaviors/default.py:59
+#: ./ftw/addressblock/behaviors/default.py:78
 msgid "description_directions"
+msgstr ""
+
+#. Default: "The id of this content will be derived from this value."
+#: ./ftw/addressblock/behaviors/default.py:33
+msgid "description_title"
 msgstr ""
 
 #: ./ftw/addressblock/configure.zcml:22
@@ -95,27 +105,27 @@ msgstr ""
 
 #. Default: "Accessibility"
 #: ./ftw/addressblock/behaviors/misc.py:30
-#: ./ftw/addressblock/browser/templates/address.pt:61
+#: ./ftw/addressblock/browser/templates/address.pt:74
 msgid "label_accessibility"
 msgstr ""
 
 #. Default: "Address"
-#: ./ftw/addressblock/behaviors/default.py:28
+#: ./ftw/addressblock/behaviors/default.py:47
 msgid "label_address"
 msgstr ""
 
 #. Default: "Address title"
-#: ./ftw/addressblock/behaviors/default.py:22
+#: ./ftw/addressblock/behaviors/default.py:41
 msgid "label_address_title"
 msgstr ""
 
 #. Default: "City"
-#: ./ftw/addressblock/behaviors/default.py:46
+#: ./ftw/addressblock/behaviors/default.py:65
 msgid "label_city"
 msgstr ""
 
 #. Default: "Country"
-#: ./ftw/addressblock/behaviors/default.py:52
+#: ./ftw/addressblock/behaviors/default.py:71
 msgid "label_country"
 msgstr ""
 
@@ -125,8 +135,8 @@ msgid "label_department"
 msgstr ""
 
 #. Default: "Directions"
-#: ./ftw/addressblock/behaviors/default.py:58
-#: ./ftw/addressblock/browser/templates/address.pt:55
+#: ./ftw/addressblock/behaviors/default.py:77
+#: ./ftw/addressblock/browser/templates/address.pt:68
 msgid "label_directions"
 msgstr ""
 
@@ -136,7 +146,7 @@ msgid "label_email"
 msgstr ""
 
 #. Default: "Extra address line"
-#: ./ftw/addressblock/behaviors/default.py:34
+#: ./ftw/addressblock/behaviors/default.py:53
 msgid "label_extra_address_line"
 msgstr ""
 
@@ -147,7 +157,7 @@ msgstr ""
 
 #. Default: "Opening hours"
 #: ./ftw/addressblock/behaviors/misc.py:22
-#: ./ftw/addressblock/browser/templates/address.pt:49
+#: ./ftw/addressblock/browser/templates/address.pt:62
 msgid "label_opening_hours"
 msgstr ""
 
@@ -162,8 +172,13 @@ msgid "label_show_email"
 msgstr ""
 
 #. Default: "Team"
-#: ./ftw/addressblock/browser/templates/block.pt:44
+#: ./ftw/addressblock/browser/templates/block.pt:39
 msgid "label_team_link"
+msgstr ""
+
+#. Default: "Title"
+#: ./ftw/addressblock/behaviors/default.py:32
+msgid "label_title"
 msgstr ""
 
 #. Default: "WWW"
@@ -172,17 +187,17 @@ msgid "label_www"
 msgstr ""
 
 #. Default: "ZIP"
-#: ./ftw/addressblock/behaviors/default.py:40
+#: ./ftw/addressblock/behaviors/default.py:59
 msgid "label_zip"
 msgstr ""
 
-#. Default: "Fax ${num}"
-#: ./ftw/addressblock/browser/templates/address.pt:28
+#. Default: "Fax ${fax_number_address}"
+#: ./ftw/addressblock/browser/templates/address.pt:41
 msgid "text_fax"
 msgstr ""
 
-#. Default: "Tel. ${num}"
-#: ./ftw/addressblock/browser/templates/address.pt:20
+#. Default: "Phone ${phone_number_address}"
+#: ./ftw/addressblock/browser/templates/address.pt:35
 msgid "text_phone"
 msgstr ""
 

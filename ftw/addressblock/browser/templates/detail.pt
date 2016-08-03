@@ -9,9 +9,6 @@
     <body>
         <div metal:fill-slot="content-core">
             <metal:content-macro define-macro="content-core">
-
-                <div tal:replace="structure provider:plone.abovecontentbody"/>
-
                 <div class="addressWrapper">
                     <div class="addressText">
                         <div tal:replace="structure view/address">Address</div>
