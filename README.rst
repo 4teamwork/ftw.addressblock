@@ -1,8 +1,16 @@
 ftw.addressblock
-###################
+################
 
-TODO: Describe the functionality of this add-on for Plone 4.3.x and how
-to use it as an editor.
+This Plone add-on installs a new content type which can be used to display
+address data. It requires ``ftw.simplelayout``.
+
+Extras
+======
+
+There is an extra ``geo`` which installs optional geo and map support. If you
+want to use this feature you must install both the ``default`` and the ``geo``
+profile in your policy (the  ``geo`` profile won't install the  ``default``
+profile).
 
 
 Development

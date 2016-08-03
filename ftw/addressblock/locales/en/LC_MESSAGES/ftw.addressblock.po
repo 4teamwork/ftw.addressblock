@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-08-03 08:51+0000\n"
+"POT-Creation-Date: 2016-08-03 09:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 msgid "Address block"
 msgstr ""
 
-#: ./ftw/addressblock/configure.zcml:22
+#: ./ftw/addressblock/configure.zcml:29
 msgid "Address block (add-on for ftw.simplelayout)"
 msgstr ""
 
@@ -53,6 +53,10 @@ msgstr ""
 
 #: ./ftw/addressblock/behaviors/misc.py:14
 msgid "Miscellaneous"
+msgstr ""
+
+#: ./ftw/addressblock/geo/configure.zcml:12
+msgid "Optional geo and map support for ftw.addressblock. Do not forget to install the default profile too."
 msgstr ""
 
 #: ./ftw/addressblock/profiles/default/types/ftw.addressblock.AddressBlock.xml
@@ -99,8 +103,12 @@ msgstr ""
 msgid "description_title"
 msgstr ""
 
-#: ./ftw/addressblock/configure.zcml:22
-msgid "ftw.addressblock default"
+#: ./ftw/addressblock/configure.zcml:29
+msgid "ftw.addressblock.default"
+msgstr ""
+
+#: ./ftw/addressblock/geo/configure.zcml:12
+msgid "ftw.addressblock.geo"
 msgstr ""
 
 #. Default: "Accessibility"
