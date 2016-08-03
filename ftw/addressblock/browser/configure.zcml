@@ -1,0 +1,28 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="ftw.addressblock">
+
+    <browser:page
+        for="ftw.addressblock.interfaces.IAddressBlock"
+        name="block_view"
+        permission="zope2.View"
+        class=".views.AddressBlockView"
+        />
+
+    <browser:page
+        for="ftw.addressblock.interfaces.IAddressBlock"
+        name="addressblock_detail_view"
+        permission="zope2.View"
+        class=".views.AddressBlockDetailView"
+        template="templates/detail.pt"
+        />
+
+    <browser:page
+        for="ftw.addressblock.interfaces.IAddressBlock"
+        name="redirect_view"
+        permission="zope2.View"
+        class="ftw.simplelayout.browser.redirect_to_parent.RedirectToParent"
+        />
+
+</configure>

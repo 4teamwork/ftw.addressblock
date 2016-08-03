@@ -7,6 +7,7 @@ from plone.app.testing import PLONE_FIXTURE
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
 from zope.configuration import xmlconfig
+import ftw.addressblock.tests.builders
 
 
 class FtwLayer(PloneSandboxLayer):
@@ -29,6 +30,9 @@ class FtwLayer(PloneSandboxLayer):
 
 FTW_FIXTURE = FtwLayer()
 FTW_FUNCTIONAL = FunctionalTesting(
-    bases=(FTW_FIXTURE,
-           set_builder_session_factory(functional_session_factory)),
-    name="ftw.addressblock:functional")
+    bases=(
+        FTW_FIXTURE,
+        set_builder_session_factory(functional_session_factory)
+    ),
+    name='ftw.addressblock:functional'
+)

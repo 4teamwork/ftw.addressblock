@@ -51,6 +51,7 @@ setup(
         'plone.app.dexterity',
         'plone.dexterity',
         'setuptools',
+        'z3c.schema',
     ],
 
     tests_require=tests_require,

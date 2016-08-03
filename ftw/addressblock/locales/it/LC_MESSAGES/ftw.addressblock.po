@@ -1,0 +1,188 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2016-08-02 14:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Preferred-Encodings: utf-8 latin1\n"
+
+#: ./ftw/addressblock/profiles/default/types/ftw.addressblock.AddressBlock.xml
+msgid "Address block"
+msgstr ""
+
+#: ./ftw/addressblock/configure.zcml:22
+msgid "Address block (add-on for ftw.simplelayout)"
+msgstr ""
+
+#: ./ftw/addressblock/behaviors/configure.zcml:34
+msgid "Adds some more fields of the address block"
+msgstr ""
+
+#: ./ftw/addressblock/behaviors/configure.zcml:27
+msgid "Adds the communication fields of the address block"
+msgstr ""
+
+#: ./ftw/addressblock/behaviors/configure.zcml:13
+msgid "Adds the default fields of the address block"
+msgstr ""
+
+#: ./ftw/addressblock/behaviors/configure.zcml:20
+msgid "Adds the department fields of the address block"
+msgstr ""
+
+#: ./ftw/addressblock/behaviors/communication.py:15
+#: ./ftw/addressblock/behaviors/configure.zcml:27
+msgid "Communication"
+msgstr ""
+
+#: ./ftw/addressblock/behaviors/configure.zcml:13
+msgid "Default"
+msgstr ""
+
+#: ./ftw/addressblock/behaviors/configure.zcml:20
+msgid "Department"
+msgstr ""
+
+#: ./ftw/addressblock/behaviors/misc.py:14
+msgid "Miscellaneous"
+msgstr ""
+
+#: ./ftw/addressblock/profiles/default/types/ftw.addressblock.AddressBlock.xml
+msgid "The address block displays address data and is usually put in the right column."
+msgstr ""
+
+#. Default: "Buildings Accessibility"
+#: ./ftw/addressblock/browser/templates/block.pt:38
+msgid "addressblock_accessibility_link"
+msgstr ""
+
+#. Default: "Address / Map"
+#: ./ftw/addressblock/browser/templates/block.pt:26
+msgid "addressblock_address_map_link"
+msgstr ""
+
+#. Default: "Open times"
+#: ./ftw/addressblock/browser/templates/block.pt:32
+msgid "addressblock_open_times_link"
+msgstr ""
+
+#. Default: "Phone ${addressblock_phone}"
+#: ./ftw/addressblock/browser/templates/block.pt:20
+msgid "addressblock_phone_label"
+msgstr ""
+
+#. Default: "Contact"
+#: ./ftw/addressblock/content/addressblock.py:42
+msgid "addressblock_title"
+msgstr ""
+
+#. Default: "Describe how to get to the above address by various means of transport."
+#: ./ftw/addressblock/behaviors/default.py:59
+msgid "description_directions"
+msgstr ""
+
+#: ./ftw/addressblock/configure.zcml:22
+msgid "ftw.addressblock default"
+msgstr ""
+
+#. Default: "Accessibility"
+#: ./ftw/addressblock/behaviors/misc.py:30
+#: ./ftw/addressblock/browser/templates/address.pt:61
+msgid "label_accessibility"
+msgstr ""
+
+#. Default: "Address"
+#: ./ftw/addressblock/behaviors/default.py:28
+msgid "label_address"
+msgstr ""
+
+#. Default: "Address title"
+#: ./ftw/addressblock/behaviors/default.py:22
+msgid "label_address_title"
+msgstr ""
+
+#. Default: "City"
+#: ./ftw/addressblock/behaviors/default.py:46
+msgid "label_city"
+msgstr ""
+
+#. Default: "Country"
+#: ./ftw/addressblock/behaviors/default.py:52
+msgid "label_country"
+msgstr ""
+
+#. Default: "Department"
+#: ./ftw/addressblock/behaviors/department.py:12
+msgid "label_department"
+msgstr ""
+
+#. Default: "Directions"
+#: ./ftw/addressblock/behaviors/default.py:58
+#: ./ftw/addressblock/browser/templates/address.pt:55
+msgid "label_directions"
+msgstr ""
+
+#. Default: "Email"
+#: ./ftw/addressblock/behaviors/communication.py:44
+msgid "label_email"
+msgstr ""
+
+#. Default: "Extra address line"
+#: ./ftw/addressblock/behaviors/default.py:34
+msgid "label_extra_address_line"
+msgstr ""
+
+#. Default: "Fax"
+#: ./ftw/addressblock/behaviors/communication.py:32
+msgid "label_fax"
+msgstr ""
+
+#. Default: "Opening hours"
+#: ./ftw/addressblock/behaviors/misc.py:22
+#: ./ftw/addressblock/browser/templates/address.pt:49
+msgid "label_opening_hours"
+msgstr ""
+
+#. Default: "Phone"
+#: ./ftw/addressblock/behaviors/communication.py:26
+msgid "label_phone"
+msgstr ""
+
+#. Default: "Show email"
+#: ./ftw/addressblock/behaviors/communication.py:38
+msgid "label_show_email"
+msgstr ""
+
+#. Default: "Team"
+#: ./ftw/addressblock/browser/templates/block.pt:44
+msgid "label_team_link"
+msgstr ""
+
+#. Default: "WWW"
+#: ./ftw/addressblock/behaviors/communication.py:49
+msgid "label_www"
+msgstr ""
+
+#. Default: "ZIP"
+#: ./ftw/addressblock/behaviors/default.py:40
+msgid "label_zip"
+msgstr ""
+
+#. Default: "Fax ${num}"
+#: ./ftw/addressblock/browser/templates/address.pt:28
+msgid "text_fax"
+msgstr ""
+
+#. Default: "Tel. ${num}"
+#: ./ftw/addressblock/browser/templates/address.pt:20
+msgid "text_phone"
+msgstr ""
+
