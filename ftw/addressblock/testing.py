@@ -27,6 +27,7 @@ class FtwLayer(PloneSandboxLayer):
         z2.installProduct(app, 'ftw.simplelayout')
 
     def setUpPloneSite(self, portal):
+        applyProfile(portal, 'ftw.simplelayout.contenttypes:default')
         applyProfile(portal, 'ftw.addressblock:default')
         applyProfile(portal, 'ftw.addressblock.geo:default')
         applyProfile(portal, 'ftw.addressblock.contact:default')

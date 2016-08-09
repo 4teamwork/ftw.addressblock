@@ -1,8 +1,10 @@
 ftw.addressblock
 ################
 
-This Plone add-on installs a new content type which can be used to display
-address data. It requires ``ftw.simplelayout``.
+*This package is an addon for `ftw.simplelayout <http://github.com/4teamwork/ftw.simplelayout>`_. Please make sure you
+already installed `ftw.simplelayout` on your plone site before installing this addon.*
+
+This add-on installs a new content type which can be used to display address data.
 
 Extras
 ======
