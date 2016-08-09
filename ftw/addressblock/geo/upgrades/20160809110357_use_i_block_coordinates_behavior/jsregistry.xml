@@ -4,13 +4,6 @@
         autogroup="False">
 
     <javascript
-        id="++resource++ftw.addressblock.geo/addressblock.js"
-        enabled="True"
-        authenticated="True"
-        insert-after="++resource++ftw.simplelayout.resources/main.js"
-        />
-
-    <javascript
         id="++resource++ftw.simplelayout.mapblock.resources/mapblock.js"
         enabled="True"
         authenticated="True"
