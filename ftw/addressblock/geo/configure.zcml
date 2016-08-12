@@ -1,6 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
     i18n_domain="ftw.addressblock">
 
     <genericsetup:registerProfile
@@ -14,5 +15,13 @@
     <include file="resources.zcml"/>
 
     <adapter factory=".adapters.AddressBlockLocationAdapter"/>
+
+
+    <include package="ftw.upgrade" file="meta.zcml" />
+
+    <upgrade-step:directory
+        profile="ftw.addressblock.geo:default"
+        directory="./upgrades"
+        />
 
 </configure>

@@ -59,7 +59,7 @@ setup(
 
     install_requires=[
         'ftw.autofeature',
-        'ftw.simplelayout [contenttypes]',
+        'ftw.simplelayout[contenttypes] >= 1.7.0',
         'ftw.upgrade',
         'Plone',
         'plone.api',
