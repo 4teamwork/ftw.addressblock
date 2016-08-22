@@ -48,7 +48,7 @@ class DetailViewTests(FunctionalTestCase):
         browser.login().visit(addressblock, view='addressblock_detail_view')
         self.assertEquals(
             ['Apple Store'],
-            browser.css('#content-core').text
+            browser.css('.addressText').text
         )
 
     @browsing
@@ -79,7 +79,7 @@ class DetailViewTests(FunctionalTestCase):
                 'no@domain.tld\n'
                 'https://www.apple.com',
             ],
-            browser.css('#content-core').text
+            browser.css('.addressText').text
         )
 
     @browsing
