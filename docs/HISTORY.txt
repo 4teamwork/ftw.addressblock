@@ -5,6 +5,10 @@ Changelog
 1.0.1 (unreleased)
 ------------------
 
+- Block is no longer searchable and will no longer be
+  included in the navigation.
+  [mbaechtold]
+
 - Use mapblock js integration to prevent duplicated googlemaps api calls.
   [mathias.leimgruber]
 
