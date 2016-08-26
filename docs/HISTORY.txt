@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.0.1 (unreleased)
+1.0.1 (2016-08-26)
 ------------------
 
 - Block is no longer searchable and will no longer be
