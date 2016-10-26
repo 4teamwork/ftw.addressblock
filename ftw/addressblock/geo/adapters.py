@@ -19,7 +19,7 @@ class AddressBlockLocationAdapter(object):
         Build a geocodable location string from the AddressBlocks address
         related fields.
         """
-        street = self.context.address.strip()
+        street = (self.context.address or '').strip()
         # Remove Postfach form street, otherwise Google geocoder API will
         # return wrong results.
         street = street.replace('Postfach', '').replace('\r', '').strip()
