@@ -41,7 +41,6 @@ class AddressMixin(object):
 
 
 class AddressBlockView(AddressMixin, BaseBlock):
-    implements(IAddressBlockDetailView)
 
     template = ViewPageTemplateFile('templates/block.pt')
 
@@ -73,3 +72,4 @@ class AddressBlockDetailView(AddressMixin, BrowserView):
     A browser view which renders the details of the address. The
     address block renders a link to this view.
     """
+    implements(IAddressBlockDetailView)
