@@ -1,3 +1,6 @@
+// XXX: NEEDS TO BE REMOVED, SINCE IT HAS NO EFFECT
+// The addressblock needs the mapblock.js in order to work
+
 (function() {
 
     "use strict";
