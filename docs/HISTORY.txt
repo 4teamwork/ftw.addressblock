@@ -5,7 +5,9 @@ Changelog
 1.0.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Change string expr. to python expr in addressblock detail view. 
+  With Chameleon a string expression is evaluated different than without (& --> &amp;).
+  [mathias.leimgruber]
 
 
 1.0.3 (2016-11-01)
