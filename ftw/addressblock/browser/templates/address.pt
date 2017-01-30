@@ -57,22 +57,22 @@
             </tal:www>
         </p>
 
-        <tal:opening_hours tal:condition="context/opening_hours">
+        <tal:opening_hours tal:condition="view/get_opening_hours">
             <a name="opening_hours"></a>
             <h2 i18n:translate="label_opening_hours">Opening hours</h2>
-            <p tal:content="structure context/opening_hours/output"></p>
+            <p tal:content="structure view/get_opening_hours"></p>
         </tal:opening_hours>
 
-        <tal:directions tal:condition="context/directions">
+        <tal:directions tal:condition="view/get_directions">
             <a name="directions"></a>
             <h2 i18n:translate="label_directions">Directions</h2>
-            <p tal:content="structure context/directions/output"></p>
+            <p tal:content="structure view/get_directions"></p>
         </tal:directions>
 
-        <tal:accessibility tal:condition="context/accessibility">
+        <tal:accessibility tal:condition="view/get_accessibility">
             <a name="accessibility"></a>
             <h2 i18n:translate="label_accessibility">Accessibility</h2>
-            <p tal:content="structure context/accessibility/output"></p>
+            <p tal:content="structure view/get_accessibility"></p>
         </tal:accessibility>
     </tal:block>
 </html>

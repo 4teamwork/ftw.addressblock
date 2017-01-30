@@ -1,6 +1,7 @@
 from Acquisition import aq_inner
 from Acquisition import aq_parent
 from collective.geo.mapwidget.browser.widget import MapWidget
+from ftw.addressblock.behaviors.misc import IAddressblockMisc
 from ftw.addressblock.interfaces import IAddressBlockDetailView
 from ftw.simplelayout.browser.blocks.base import BaseBlock
 from Products.Five.browser import BrowserView
@@ -39,6 +40,21 @@ class AddressMixin(object):
         address_map.klass = 'blockwidget-cgmap'
         return address_map
 
+    def get_opening_hours(self):
+        if IAddressblockMisc(self.context, None) and self.context.opening_hours:
+            return self.context.opening_hours.output
+        return ''
+
+    def get_accessibility(self):
+        if IAddressblockMisc(self.context, None) and self.context.accessibility:
+            return self.context.accessibility.output
+        return ''
+
+    def get_directions(self):
+        if self.context.directions:
+            return self.context.directions.output
+        return ''
+
 
 class AddressBlockView(AddressMixin, BaseBlock):
 
@@ -53,8 +69,8 @@ class AddressBlockView(AddressMixin, BaseBlock):
                 'detail_view_url': '{0}/addressblock_detail_view'.format(
                     self.context.absolute_url()
                 ),
-                'accessibility': self.context.accessibility,
-                'opening_hours': self.context.opening_hours,
+                'accessibility': self.get_accessibility(),
+                'opening_hours': self.get_opening_hours(),
                 'email': self.context.email,
                 'contact_url': '{0}/@@contact'.format(
                     self.context.absolute_url()

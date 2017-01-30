@@ -5,6 +5,9 @@ Changelog
 1.0.4 (unreleased)
 ------------------
 
+- Make reading value of the address block's rich text fields more robust.
+  [mbaechtold]
+
 - Change string expr. to python expr in addressblock detail view. 
   With Chameleon a string expression is evaluated different than without (& --> &amp;).
   [mathias.leimgruber]
