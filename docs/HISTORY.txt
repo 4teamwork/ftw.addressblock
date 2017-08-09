@@ -5,7 +5,7 @@ Changelog
 1.0.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Move base test classes to own module. [mbaechtold]
 
 
 1.0.5 (2017-03-07)

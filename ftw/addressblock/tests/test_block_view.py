@@ -1,4 +1,4 @@
-from ftw.addressblock.tests import FunctionalTestCase
+from ftw.addressblock.tests.base import FunctionalTestCase
 from ftw.builder import Builder
 from ftw.builder import create
 from ftw.testbrowser import browsing

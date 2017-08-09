@@ -1,4 +1,4 @@
-from ftw.addressblock.tests import FunctionalTestCase
+from ftw.addressblock.tests.base import FunctionalTestCase
 from Products.CMFCore.utils import getToolByName
 
 
