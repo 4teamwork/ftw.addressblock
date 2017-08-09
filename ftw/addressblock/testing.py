@@ -10,6 +10,8 @@ from plone.app.testing import ploneSite
 from plone.testing import z2
 from zope.configuration import xmlconfig
 import ftw.addressblock.tests.builders
+from ftw.subsite.tests import builders
+from ftw.simplelayout.tests import builders
 
 
 class FtwLayer(PloneSandboxLayer):
