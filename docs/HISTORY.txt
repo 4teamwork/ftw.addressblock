@@ -5,7 +5,7 @@ Changelog
 1.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Enable map for anonymous users. [lknoepfel]
 
 
 1.1.0 (2017-08-09)
