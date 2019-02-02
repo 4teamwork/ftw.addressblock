@@ -5,7 +5,7 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix import error when ftw.subsite is missing. [jone]
 
 
 1.1.1 (2017-11-27)

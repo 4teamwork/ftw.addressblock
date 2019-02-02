@@ -3,7 +3,6 @@ from email.header import Header
 from email.mime.text import MIMEText
 from ftw.addressblock import _
 from ftw.addressblock.interfaces import IAddressBlock
-from ftw.subsite.interfaces import ISubsite
 from plone import api
 from plone.formwidget.recaptcha.widget import ReCaptchaFieldWidget
 from plone.registry.interfaces import IRegistry
@@ -22,6 +21,16 @@ from zope.component import getUtility
 from zope.i18n import translate
 from zope.interface import Interface
 from zope.interface import Invalid
+import pkg_resources
+
+
+try:
+    pkg_resources.get_distribution('ftw.subsite')
+except pkg_resources.DistributionNotFound:
+    HAS_SUBSITE = False
+else:
+    from ftw.subsite.interfaces import ISubsite
+    HAS_SUBSITE = True
 
 
 class IContactView(Interface):
@@ -127,7 +136,7 @@ class ContactForm(form.Form):
         to_email = portal.getProperty('email_from_address', '')
 
         nav_root = api.portal.get_navigation_root(self.context)
-        if ISubsite.providedBy(nav_root):
+        if HAS_SUBSITE and ISubsite.providedBy(nav_root):
             to_email = self.context.from_email or to_email
         elif self.is_addressblock():
             to_email = self.context.email or to_email
