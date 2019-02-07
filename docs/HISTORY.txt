@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.1.2 (unreleased)
+1.1.2 (2019-02-07)
 ------------------
 
 - The "Title" attribute should return utf8 encoded string instead of unicode. [mathias.leimgruber]
