@@ -3,6 +3,7 @@ from ftw.addressblock.interfaces import IAddressBlock
 from plone import api
 from plone.autoform.interfaces import IFormFieldProvider
 from plone.dexterity.content import Item
+from plone.dexterity.utils import safe_utf8
 from plone.directives import form
 from zope.i18n import translate
 from zope.interface import implements
@@ -18,7 +19,7 @@ class AddressBlock(Item):
     implements(IAddressBlock)
 
     def Title(self):
-        return self.title or self.fallback_title
+        return safe_utf8(self.title or self.fallback_title)
 
     @property
     def fallback_title(self):

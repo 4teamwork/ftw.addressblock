@@ -5,7 +5,9 @@ Changelog
 1.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- The "Title" attribute should return utf8 encoded string instead of unicode. [mathias.leimgruber]
+
+- Pin c.geo versions for plone 4.3.x [mathias.leimgruber]
 
 
 1.1.1 (2017-11-27)
