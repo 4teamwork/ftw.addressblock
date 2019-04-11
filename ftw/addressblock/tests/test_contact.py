@@ -1,13 +1,13 @@
+import transaction
 from ftw.addressblock.tests.base import FunctionalTestCase
 from ftw.builder import Builder
 from ftw.builder import create
 from ftw.testbrowser import browsing
 from ftw.testbrowser.pages import statusmessages
+from ftw.testing import IS_PLONE_5
 from ftw.testing.mailing import Mailing
 from plone.registry.interfaces import IRegistry
 from zope.component import getUtility
-import transaction
-
 
 FORM_DATA = {
     'Name': u'Zaph\xf6d Beeblebrox',
@@ -25,10 +25,21 @@ class ContactTests(FunctionalTestCase):
 
         Mailing(self.portal).set_up()
 
-        self.portal.manage_changeProperties({
-            'email_from_name': u'Pl\xf6ne Admin',
-            'email_from_address': u'plone@admin.ch',
-        })
+        name = u'Pl\xf6ne Admin'
+        email = u'plone@admin.ch'
+
+        if IS_PLONE_5:
+            from plone import api
+            reg = api.portal.get_tool('portal_registry')
+            from_email_field = reg._records.get('plone.email_from_address')
+            from_name_field = reg._records.get('plone.email_from_name')
+            from_email_field._set_value(email.encode('utf-8'))
+            from_name_field._set_value(name)
+        else:
+            self.portal.manage_changeProperties({
+                'email_from_name': name,
+                'email_from_address': email,
+            })
 
         transaction.commit()
 
