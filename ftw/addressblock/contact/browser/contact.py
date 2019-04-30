@@ -1,6 +1,8 @@
-from Acquisition import aq_inner
 from email.header import Header
 from email.mime.text import MIMEText
+
+import pkg_resources
+
 from ftw.addressblock import _
 from ftw.addressblock.interfaces import IAddressBlock
 from ftw.subsite.interfaces import ISubsite
@@ -22,6 +24,8 @@ from zope.component import getUtility
 from zope.i18n import translate
 from zope.interface import Interface
 from zope.interface import Invalid
+
+IS_PLONE_5 = pkg_resources.get_distribution('Products.CMFPlone').version >= '5'
 
 
 class IContactView(Interface):
@@ -126,6 +130,17 @@ class ContactForm(form.Form):
         portal = api.portal.get()
         to_email = portal.getProperty('email_from_address', '')
 
+        if IS_PLONE_5:
+            reg = api.portal.get_tool('portal_registry')
+            from_email_field = reg._records.get('plone.email_from_address')
+            if not from_email_field.value and not to_email:
+                # especially for testing reasons we need to set a value here
+                # if none is registered on the page in plone5
+                from_email_field._set_value('test@localhost')
+                to_email = from_email_field.value
+            else:
+                to_email = from_email_field.value
+
         nav_root = api.portal.get_navigation_root(self.context)
         if ISubsite.providedBy(nav_root):
             to_email = self.context.from_email or to_email
@@ -159,10 +174,23 @@ class ContactForm(form.Form):
         msg = MIMEText(msg_body.encode('utf-8'), 'plain', 'utf-8')
         msg['Subject'] = Header(subject, 'utf-8')
 
-        msg['From'] = Header(u'{0} <{1}>'.format(
-            safe_unicode(portal.getProperty('email_from_name')),
-            safe_unicode(portal.getProperty('email_from_address'))
-        ), 'utf-8')
+        if IS_PLONE_5:
+            from plone import api
+            reg = api.portal.get_tool('portal_registry')
+            from_email_field = reg._records.get('plone.email_from_address')
+            from_name_field = reg._records.get('plone.email_from_name')
+            from_name = from_name_field.value
+            if not from_email_field.value:
+                # especially for testing reasons we need to set a value here
+                # if none is registered on the page in plone5
+                from_email_field._set_value('test@localhost')
+                from_email = from_email_field.value
+            else:
+                from_email = from_email_field.value
+        else:
+            from_name = safe_unicode(portal.getProperty('email_from_name'))
+            from_email = safe_unicode(portal.getProperty('email_from_address'))
+        msg['From'] = Header(u'{0} <{1}>'.format(from_name, from_email), 'utf-8')
 
         msg['Reply-To'] = Header(u'{0} <{1}>'.format(
             safe_unicode(sender),
