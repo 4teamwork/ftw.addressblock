@@ -5,7 +5,7 @@ Changelog
 1.2.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Add zoomlevel and maplayers support for addressblocks [Nachtalb]
 
 
 1.2.0 (2019-04-30)
