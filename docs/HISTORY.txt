@@ -5,6 +5,7 @@ Changelog
 1.2.1 (unreleased)
 ------------------
 
+- Fix edit permissions for addressblock [Nachtalb]
 - Add zoomlevel and maplayers support for addressblocks [Nachtalb]
 
 
