@@ -1,9 +1,9 @@
 from Acquisition import aq_inner
 from Acquisition import aq_parent
-from collective.geo.mapwidget.browser.widget import MapWidget
 from ftw.addressblock.behaviors.misc import IAddressblockMisc
 from ftw.addressblock.interfaces import IAddressBlockDetailView
 from ftw.simplelayout.browser.blocks.base import BaseBlock
+from ftw.simplelayout.mapblock.browser.mapblock import BlockMapWidget
 from Products.Five.browser import BrowserView
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from zope.interface import implements
@@ -34,7 +34,7 @@ class AddressMixin(object):
         return self.address_template()
 
     def get_address_map(self):
-        address_map = MapWidget(self, self.request, self.context)
+        address_map = BlockMapWidget(self, self.request, self.context)
         address_map.mapid = "geo-%s" % self.context.getId()
         address_map.addClass('block-map')
         address_map.klass = 'blockwidget-cgmap'

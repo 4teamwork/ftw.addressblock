@@ -12,6 +12,7 @@ geo_require = [
     'collective.geo.bundle [dexterity]',
     'collective.geo.mapwidget',
     'ftw.geo',
+    'plone.behavior',
 ]
 
 tests_require = [
