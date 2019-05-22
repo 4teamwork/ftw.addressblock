@@ -2,7 +2,7 @@ Changelog
 =========
 
 
-1.2.1 (unreleased)
+1.2.1 (2019-05-22)
 ------------------
 
 - Fix edit permissions for addressblock [Nachtalb]
