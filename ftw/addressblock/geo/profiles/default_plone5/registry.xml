@@ -5,39 +5,4 @@
         <value key="map_viewlet_position">plone.belowcontentbody</value>
     </records>
 
-    <records prefix="plone.resources/ftw-addressblock-js-authenticated"
-             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-        <value key="js">++resource++ftw.addressblock.geo/addressblock.js</value>
-        <value key="deps">jquery</value>
-    </records>
-
-    <records prefix="plone.resources/ftw-addressblock-js"
-             interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-        <value key="js">++resource++ftw.simplelayout.mapblock.resources/mapblock.js</value>
-        <value key="deps">jquery</value>
-    </records>
-
-    <records prefix="plone.bundles/ftw-addressblock-resources"
-             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
-        <value key="resources">
-            <element>ftw-addressblock-js</element>
-        </value>
-        <value key="enabled">True</value>
-        <value key="depends">ftw-simplelayout</value>
-        <value key="compile">False</value>
-        <value key="jscompilation">++plone++addressblock/ftw-addressblock-compiled.js</value>
-    </records>
-
-    <records prefix="plone.bundles/ftw-addressblock-resources-loggedin"
-             interface='Products.CMFPlone.interfaces.IBundleRegistry'>
-        <value key="resources">
-            <element>ftw-addressblock-js-authenticated</element>
-        </value>
-        <value key="expression">python: member is not None</value>
-        <value key="enabled">True</value>
-        <value key="depends">ftw-simplelayout</value>
-        <value key="compile">False</value>
-        <value key="jscompilation">++plone++addressblock/ftw-addressblock-compiled-loggedin.js</value>
-    </records>
-
 </registry>
