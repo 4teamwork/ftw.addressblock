@@ -13,6 +13,7 @@ geo_require = [
     'collective.geo.mapwidget',
     'ftw.geo',
     'plone.behavior',
+    'ftw.simplelayout[mapblock]',
 ]
 
 tests_require = [
