@@ -5,7 +5,6 @@ import pkg_resources
 
 from ftw.addressblock import _
 from ftw.addressblock.interfaces import IAddressBlock
-from ftw.subsite.interfaces import ISubsite
 from plone import api
 from plone.formwidget.recaptcha.widget import ReCaptchaFieldWidget
 from plone.registry.interfaces import IRegistry
@@ -26,6 +25,16 @@ from zope.interface import Interface
 from zope.interface import Invalid
 
 IS_PLONE_5 = pkg_resources.get_distribution('Products.CMFPlone').version >= '5'
+
+try:
+    pkg_resources.get_distribution('ftw.subsite')
+except pkg_resources.DistributionNotFound:
+    IS_SUBSITE_INSTALLED = False
+else:
+    IS_SUBSITE_INSTALLED = True
+
+if IS_SUBSITE_INSTALLED:
+    from ftw.subsite.interfaces import ISubsite
 
 
 class IContactView(Interface):
@@ -142,7 +151,7 @@ class ContactForm(form.Form):
                 to_email = from_email_field.value
 
         nav_root = api.portal.get_navigation_root(self.context)
-        if ISubsite.providedBy(nav_root):
+        if IS_SUBSITE_INSTALLED and ISubsite.providedBy(nav_root):
             to_email = self.context.from_email or to_email
         elif self.is_addressblock():
             to_email = self.context.email or to_email
