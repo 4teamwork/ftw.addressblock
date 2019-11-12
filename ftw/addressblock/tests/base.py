@@ -1,7 +1,7 @@
 import transaction
 from ftw.addressblock.testing import FTW_FUNCTIONAL
 from plone.app.testing import setRoles, TEST_USER_ID
-from unittest2 import TestCase
+from unittest import TestCase
 
 
 class FunctionalTestCase(TestCase):
