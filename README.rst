@@ -10,9 +10,7 @@ Extras
 ======
 
 There is an extra ``geo`` which installs optional geo and map support. If you
-want to use this feature you must install both the ``default`` and the ``geo``
-profile in your policy (the  ``geo`` profile won't install the  ``default``
-profile).
+want to use this feature you must install ``geo`` profile in your policy.
 
 Since ``1.2.1`` the zoomlevel and maplayer defined in the addressblocks edit panel
 is saved. However, this will only work together with ``ftw.simplelayout`` versions
