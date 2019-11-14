@@ -1,10 +1,16 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:profilehook="http://namespaces.zope.org/profilehook"
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:upgrade-step="http://namespaces.zope.org/ftw.upgrade"
+    xmlns:five="http://namespaces.zope.org/five"
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="ftw.addressblock">
+
+    <include package="ftw.profilehook" />
+
+    <five:registerPackage package="." initialize=".initialize" />
 
     <genericsetup:registerProfile
         zcml:condition="not-have plone-5"
@@ -23,6 +29,31 @@
         directory="profiles/default_plone5"
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
+
+    <genericsetup:registerProfile
+        zcml:condition="not-have plone-5"
+        name="uninstall"
+        title="Uninstall ftw.addressblock.geo"
+        directory="profiles/uninstall"
+        description=""
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+        />
+
+    <genericsetup:registerProfile
+        zcml:condition="have plone-5"
+        name="uninstall"
+        title="Uninstall ftw.addressblock.geo"
+        directory="profiles/uninstall_plone5"
+        description=""
+        provides="Products.GenericSetup.interfaces.EXTENSION"
+        for="Products.CMFPlone.interfaces.IMigratingPloneSiteRoot"
+        />
+
+    <profilehook:hook
+      profile="ftw.addressblock.geo:uninstall"
+      handler=".hooks.uninstalled"
+      />
 
     <include file="resources.zcml"/>
 
