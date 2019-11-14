@@ -10,10 +10,6 @@
         interface="Products.CMFPlone.interfaces.IResourceRegistry"
         remove="true" />
 
-    <records prefix="plone.resources/addressblock-geo-mapblock-js"
-        interface="Products.CMFPlone.interfaces.IResourceRegistry"
-        remove="true" />
-
     <records prefix="plone.bundles/ftw-addressblock-geo-resources"
         interface="Products.CMFPlone.interfaces.IBundleRegistry"
         remove="true" />
