@@ -18,7 +18,7 @@
         <value key="enabled">True</value>
         <value key="depends">plone-legacy</value>
         <value key="compile">False</value>
-        <value key="jscompilation">++plone++addressblock/ftw-addressblock-geo-compiled.js</value>
+        <value key="jscompilation">++plone++ftw.addressblock.geo/ftw-addressblock-geo-compiled.js</value>
         <value key="merge_with">default</value>
     </records>
 
