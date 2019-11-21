@@ -13,8 +13,6 @@
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />
 
-    <include file="resources.zcml"/>
-
     <adapter factory=".adapters.AddressBlockLocationAdapter"/>
 
 
