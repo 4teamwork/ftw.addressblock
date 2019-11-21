@@ -55,8 +55,6 @@
       handler=".hooks.uninstalled"
       />
 
-    <include file="resources.zcml"/>
-
     <adapter factory=".adapters.AddressBlockLocationAdapter"/>
 
 
