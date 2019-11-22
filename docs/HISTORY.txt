@@ -9,9 +9,6 @@ Changelog
 - Remove obsolete addressblock.js - also from legacy bundle, since this lead
   to the fact, that the mapblock.js was registered twice, which lead to the fact,
   that the whole map implementation was broken. [mathias.leimgruber]
-- Fix: make ftw.addressblock.geo plone5 compatible.
-  There is still an issue with the initial overlay -> `Issue 31<https://github.com/4teamwork/ftw.addressblock/issues/31>`_.
-  [busykoala]
 
 
 1.2.1 (2019-05-22)
