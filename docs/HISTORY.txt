@@ -2,12 +2,12 @@ Changelog
 =========
 
 
-1.2.2 (unreleased)
+2.0.0 (unreleased)
 ------------------
 
 - Check for ftw.subsite installed before using its interface. [busykoala]
 - Remove obsolete addressblock.js - also from legacy bundle, since this lead
-  to the fact, that the mapblock.js was registered twice, which lead to the fact, 
+  to the fact, that the mapblock.js was registered twice, which lead to the fact,
   that the whole map implementation was broken. [mathias.leimgruber]
 
 

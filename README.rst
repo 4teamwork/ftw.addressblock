@@ -1,6 +1,14 @@
 ftw.addressblock
 ################
 
+**IMPORTANT:** In Plone 5 a plonetheme other than the default has to be installed for some
+things to work (i.e. plonetheme.blueberry).
+
+**IMPORTANT:** If the geo profile is enabled a special workflow has to be followed
+in order to use custom map extracts.
+- Add an address in the address tab and save.
+- Edit again and now the map extraction can be edited.
+
 This package is an addon for `ftw.simplelayout <http://github.com/4teamwork/ftw.simplelayout>`_. Please make sure you
 already installed ``ftw.simplelayout`` on your plone site before installing this addon.
 
@@ -10,9 +18,7 @@ Extras
 ======
 
 There is an extra ``geo`` which installs optional geo and map support. If you
-want to use this feature you must install both the ``default`` and the ``geo``
-profile in your policy (the  ``geo`` profile won't install the  ``default``
-profile).
+want to use this feature you must install ``geo`` profile in your policy.
 
 Since ``1.2.1`` the zoomlevel and maplayer defined in the addressblocks edit panel
 is saved. However, this will only work together with ``ftw.simplelayout`` versions

@@ -3,5 +3,8 @@
     <dependencies>
         <dependency>profile-collective.geo.bundle:default</dependency>
         <dependency>profile-ftw.geo:default</dependency>
+        <dependency>profile-ftw.simplelayout.mapblock:default</dependency>
+        <dependency>profile-ftw.simplelayout.contenttypes:default</dependency>
+        <dependency>profile-ftw.addressblock:default</dependency>
     </dependencies>
 </metadata>

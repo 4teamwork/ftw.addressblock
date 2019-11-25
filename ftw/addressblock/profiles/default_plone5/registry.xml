@@ -2,7 +2,7 @@
 <registry>
 
     <record name="plone.types_not_searched" interface="Products.CMFPlone.interfaces.controlpanel.ISearchSchema" field="types_not_searched">
-        <value>
+        <value purge="false">
             <element>ftw.addressblock.AddressBlock</element>
         </value>
     </record>
