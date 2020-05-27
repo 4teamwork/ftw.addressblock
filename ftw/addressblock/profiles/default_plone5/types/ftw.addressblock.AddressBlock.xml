@@ -26,7 +26,6 @@
     <property name="behaviors">
         <element value="plone.app.content.interfaces.INameFromTitle" />
         <element value="ftw.simplelayout.interfaces.ISimplelayoutBlock" />
-        <element value="plone.app.referenceablebehavior.referenceable.IReferenceable"/>
         <element value="ftw.addressblock.behaviors.department.IAddressblockDepartment"/>
         <element value="ftw.addressblock.behaviors.default.IAddressblockDefault"/>
         <element value="ftw.addressblock.behaviors.communication.IAddressblockCommunication"/>
