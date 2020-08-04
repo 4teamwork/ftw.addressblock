@@ -9,7 +9,7 @@ contact_require = [
 ]
 
 geo_require = [
-    'collective.geo.bundle [dexterity]',
+    'collective.geo.leaflet',
     'collective.geo.mapwidget',
     'ftw.geo',
     'plone.behavior',
